@@ -20,10 +20,10 @@ class CreateUserLocationsTable extends Migration
             $table->string('latitude', 40);
             $table->string('longitude', 40);
             $table->string('ip_address', 20);
+            $table->text('address')->nullable(); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->foreign('city_id')->references('id')->on('cities');
-            $table->primary(['user_id']);
-            $table->text('address')->nullable();
+
             $table->timestamps();
         });
     }
