@@ -23,10 +23,10 @@ class CreatePostsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('post_images', function (Blueprint $table) {
+        Schema::create('post_media', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('post_id')->unsigned();
-            $table->string('image_path');
+            $table->string('media_path');
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('CASCADE');
         });
 

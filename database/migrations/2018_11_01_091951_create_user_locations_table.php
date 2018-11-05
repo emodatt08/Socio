@@ -23,7 +23,6 @@ class CreateUserLocationsTable extends Migration
             $table->text('address')->nullable(); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->foreign('city_id')->references('id')->on('cities');
-
             $table->timestamps();
         });
     }
