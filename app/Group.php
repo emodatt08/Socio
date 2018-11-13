@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class group extends Model
+class Group extends Model
 {
     protected $table = 'groups';
     public $timestamps = false;
