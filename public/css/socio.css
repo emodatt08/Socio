@@ -1,0 +1,110 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: Avenir;
+    color:black;
+    background-color: #3498db; 
+}
+
+/* login css */
+.wrap{
+    width:450px;
+    overflow:hidden;
+    margin:auto;
+    margin-top:180px;
+    padding:20px;
+    background: #fff;
+    border-radius:5px;
+    border: 1px solid silver;
+}
+.wrap > input{
+    width:400px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid silver;
+    padding:5px;
+}
+.wrap > .btn-login{
+    width:400px;
+    height: 35px;
+    color:white;
+    padding:5px;
+    border:0;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #3498db; 
+}
+.wrap > h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* navbar css */
+header{
+    background-color: #fff;
+    color:black;
+}
+
+header::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+.logo{
+    float:left
+}
+
+nav{
+     float:left;
+}
+
+nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+
+}
+
+nav li{
+    display:inline-block;
+    margin-left:70px;
+    padding-top:25px;
+    padding: 10px 0;
+    position: relative;
+}
+nav a{
+    color:black;
+    text-decoration:none;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color:black;
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: black;
+
+    position:absolute;
+    top:0;
+    width:0%;
+    transition: all ease-in-out 300ms;
+}
+
+nav a:hover::before{
+    width:100%
+}
+
+
+/* custom Font style */
+
+@font-face {
+    font-family: Avenir;
+    font-weight: bold;
+    src: url("AvenirLT/AvenirLTStd-Heavy.otf") format("opentype");
+}
