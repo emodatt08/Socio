@@ -19,11 +19,13 @@
 
 <!-- Navbar -->
 <header>
+  <button class="btn-signup">SignIn</button>
     <nav>
         <ul>
             <li><a href = "#">Trending</a></li>
-            <li><a href = "#">Photos</a></li>
+            <li><a href = "#">Lifestyle & Food</a></li>
             <li><a href = "#">Gifs</a></li>
+            <li><a href = "#">Sports</a></li>
             <li><a href = "#">Music</a></li>
             <li><a href = "#">News</a></li>
         </ul>

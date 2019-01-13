@@ -11,8 +11,10 @@ body{
     width:450px;
     overflow:hidden;
     margin:auto;
-    margin-top:180px;
+    margin-top:100px;
     padding:20px;
+    margin-right: 20px;
+    float:right;
     background: #fff;
     border-radius:5px;
     border: 1px solid silver;
@@ -25,15 +27,43 @@ body{
     border: 1px solid silver;
     padding:5px;
 }
-.wrap > .btn-login{
+.wrap > .btn-group > .btn-login{
     width:400px;
     height: 35px;
     color:white;
     padding:5px;
-    border:0;
+    border:0;  
+    margin:5px;
+    cursor: pointer;
     border-radius: 3px;
     font-size: 20px;
     background-color: #3498db; 
+}
+.wrap > .btn-group > .btn-facebook{
+    width:400px;
+    height: 35px;
+    color:white;
+    margin:5px;
+    border:0;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #3b5998; 
+}
+.wrap > .btn-group{
+     display: block;
+}
+
+.wrap > .btn-group > .btn-google{
+    width:400px;
+    height: 35px;
+    color:white;
+    border:0;
+    margin:5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #dc4e41; 
 }
 .wrap > h2{
     text-align: center;
@@ -54,6 +84,25 @@ header::after{
 
 .logo{
     float:left
+}
+.btn-signup{
+    float:right;
+    padding: 5px 0;
+    width:100px;
+    height: 35px;
+    color:white;
+    border:0;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #3498db; 
+}
+
+.btn-signup:hover{
+     background-color: white; 
+      color:#3498db;
 }
 
 nav{
@@ -100,6 +149,97 @@ nav a:hover::before{
     width:100%
 }
 
+/* Modals */
+.signUpModal{
+    /* display:none; */
+    position:fixed;
+    z-index: 1;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    overflow:auto; 
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.signup_content{
+   background-color: #f4f4f4;
+   margin: 40px auto;
+   padding: 20px;
+   width:30%;
+   height:75%;
+   border-radius: 7px;
+   box-shadow: 0 5px  8px rgba( 0, 0, 0 ,0.2),
+    0 7px  20px rgba( 0, 0, 0 ,0.17);
+}
+.signupModalForm{
+    overflow:hidden;
+    /* margin:auto; */
+    padding:10px;
+}
+.signupModalForm > input{
+    width:390px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid silver;
+    padding:5px;
+}
+
+.signupModalForm > .btn-group > .btn-login{
+    width:400px;
+    height: 35px;
+    color:white;
+    padding:5px;
+    border:0;  
+    margin:5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #3498db; 
+}
+.signupModalForm > .btn-group > .btn-facebook{
+    width:400px;
+    height: 35px;
+    color:white;
+    margin:5px;
+    border:0;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #3b5998; 
+}
+.signupModalForm > .btn-group{
+     display: block;
+}
+
+.signupModalForm > .btn-group > .btn-google{
+    width:400px;
+    height: 35px;
+    color:white;
+    border:0;
+    margin:5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #dc4e41; 
+}
+.signupModalForm > h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.closeBtn{
+    float:right;
+    font-size:20px;
+}
+
+.closeBtn:hover, .closeBtn:focus{
+    text-decoration:none;
+    color:#3498db;
+    cursor:pointer;
+}
 
 /* custom Font style */
 
