@@ -34,10 +34,5 @@ $postsRoutes = function(){
 };
 
 
-Route::group(['middleware' => 'guest'], function(){
-    Route::get('/', function(){
-        return view('layouts.guest');
-    });
-});
 
 Route::get('/home', 'HomeController@index')->name('home');
