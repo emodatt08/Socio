@@ -151,7 +151,7 @@ nav a:hover::before{
 
 /* Modals */
 .signUpModal{
-    /* display:none; */
+    display:none;
     position:fixed;
     z-index: 1;
     left:0;
@@ -164,15 +164,23 @@ nav a:hover::before{
 }
 
 .signup_content{
-   background-color: #f4f4f4;
+   background-color: white;
    margin: 40px auto;
    padding: 20px;
    width:30%;
-   height:75%;
+   height:85%;
    border-radius: 7px;
    box-shadow: 0 5px  8px rgba( 0, 0, 0 ,0.2),
     0 7px  20px rgba( 0, 0, 0 ,0.17);
+    animation-name:modalOpen;
+    animation-duration:3s;
 }
+
+@keyframes modalOpen{
+    from{opacity:0}
+    to{opacity:1}
+}
+
 .signupModalForm{
     overflow:hidden;
     /* margin:auto; */
@@ -185,6 +193,17 @@ nav a:hover::before{
     border-radius: 3px;
     border: 1px solid silver;
     padding:5px;
+}
+.signupModalForm > .country{
+    width:390px;
+    height: 35px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid silver;
+    padding:5px;
+    background-repeat:no-repeat;
+    background-position:bottom left;
+    padding-left:30px;
 }
 
 .signupModalForm > .btn-group > .btn-login{

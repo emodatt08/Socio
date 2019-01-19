@@ -1,12 +1,10 @@
 @include('widgets.header')
 
 
-<body>
+
         <div class="wrap">
             <h2>Login</h2>
-                <label>Mobile Number</label>
-                <input type="text" name="phonenumber" placeholder="+233"/>
-
+                           
                 <label>Username</label>
                 <input type="text" name="username" placeholder="e.g. Judge judy"/>
 

@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+$countriesRoutes = function(){
+ Route::post('/store', 'CountriesController@storeCountryData');
+ Route::post('/codes', 'CountriesController@phoneCodes');
+};
+
+Route::group(['prefix' => 'country'], $countriesRoutes);

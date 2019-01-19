@@ -15,11 +15,14 @@
     <link href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- <link href="{{ asset('plugins/bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/socio.css') }}" rel="stylesheet">
+    <!-- Script --->
+    <!-- <script src="{{ asset('js/modals/signup_modal.js') }}"></script> -->
 </head>
 
+<body>
 <!-- Navbar -->
 <header>
-  <button class="btn-signup">SignIn</button>
+  <button id="btn-signup" class="btn-signup">SignUp</button>
     <nav>
         <ul>
             <li><a href = "#">Trending</a></li>
