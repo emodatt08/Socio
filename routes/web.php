@@ -11,7 +11,7 @@
 |
 */
 
-<<<<<<< HEAD
+
 
 /**
  * Auth Routes 
@@ -32,19 +32,12 @@ Route::group(['middleware'=>'guest'], $userRoutes);
 $postsRoutes = function(){
 
 };
-=======
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+
 
 Route::group(['middleware' => 'guest'], function(){
     Route::get('/', function(){
         return view('layouts.guest');
     });
 });
-
-Auth::routes();
-Auth::routes();
->>>>>>> 6f0a6cf2737f3f4bf1019a63a405ad64d7c6aa86
 
 Route::get('/home', 'HomeController@index')->name('home');
