@@ -13,26 +13,46 @@
 
 
 
-/**
- * Auth Routes 
- */
-Auth::routes();
+
 
 /**
  * User Routes
  */
 $userRoutes = function(){
     Route::get('/', 'UsersController@index');
+
 };
-Route::group(['middleware'=>'guest'], $userRoutes);
+    Route::group(['middleware'=>'guest'], $userRoutes);
 
 /**
  * Post Routes
  */
 $postsRoutes = function(){
-
+ Route::get('user/posts', 'UserController@posts');
 };
 
+/**
+ * Social Routes
+ */
+$socialRoutes = function(){
+    //Facebook routes
+    Route::get('auth/facebook', 'FacebookController@redirectToFacebook');
+    Route::get('auth/facebook/callback', 'FacebookController@handleFacebookCallback');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+};
+/**
+ * All Social Route Group
+ */
+Route::group(['prefix' => 'social'], 
+        $socialRoutes
+);
+
+
+/**
+ * Auth Routes 
+ */
+Auth::routes();
+
+
+ Route::get('/home', 'HomeController@index')->name('home');

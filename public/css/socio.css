@@ -7,7 +7,7 @@ body{
 }
 
 /* login css */
-.wrap{
+.wrap > form{
     width:450px;
     overflow:hidden;
     margin:auto;
@@ -19,7 +19,7 @@ body{
     border-radius:5px;
     border: 1px solid silver;
 }
-.wrap > input{
+.wrap > form > input{
     width:400px;
     height: 35px;
     margin-bottom: 20px;
@@ -27,7 +27,7 @@ body{
     border: 1px solid silver;
     padding:5px;
 }
-.wrap > .btn-group > .btn-login{
+.wrap >  form .btn-group > .btn-login{
     width:400px;
     height: 35px;
     color:white;
@@ -39,7 +39,7 @@ body{
     font-size: 20px;
     background-color: #3498db; 
 }
-.wrap > .btn-group > .btn-facebook{
+.wrap   > form >.btn-group > a > .btn-facebook{
     width:400px;
     height: 35px;
     color:white;
@@ -50,11 +50,11 @@ body{
     font-size: 20px;
     background-color: #3b5998; 
 }
-.wrap > .btn-group{
+.wrap  > form > .btn-group{
      display: block;
 }
 
-.wrap > .btn-group > .btn-google{
+.wrap  > form > .btn-group > .btn-google{
     width:400px;
     height: 35px;
     color:white;
@@ -65,7 +65,7 @@ body{
     font-size: 20px;
     background-color: #dc4e41; 
 }
-.wrap > h2{
+form >   h2{
     text-align: center;
     margin-bottom: 30px;
 }

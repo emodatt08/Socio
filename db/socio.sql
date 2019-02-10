@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 100129
 File Encoding         : 65001
 
-Date: 2019-01-19 22:21:13
+Date: 2019-02-10 22:05:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -405,7 +405,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -422,6 +422,7 @@ INSERT INTO `migrations` VALUES ('9', '2018_11_01_091842_create_groups_table', '
 INSERT INTO `migrations` VALUES ('11', '2018_11_01_091951_create_user_locations_table', '5');
 INSERT INTO `migrations` VALUES ('12', '2018_11_01_094604_create_user_relationships_table', '5');
 INSERT INTO `migrations` VALUES ('13', '2018_11_01_091918_create_user_hobbies_table', '6');
+INSERT INTO `migrations` VALUES ('14', '2019_01_25_013733_add_column_to_users_table', '7');
 
 -- ----------------------------
 -- Table structure for password_resets
@@ -532,11 +533,13 @@ CREATE TABLE `users` (
   `sex` tinyint(1) NOT NULL DEFAULT '0',
   `phone` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `bio` varchar(140) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `profile_path` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `avatar` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `profile_path` text COLLATE utf8mb4_unicode_ci,
   `cover_path` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `facebook_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
